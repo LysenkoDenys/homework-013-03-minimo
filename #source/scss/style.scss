@@ -1,0 +1,314 @@
+// файл стилів для старту (обнуляючий):
+@import "start-style.scss";
+// файл шрифтів:
+@import "fonts.scss";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Playfair+Display&family=Ubuntu&display=swap");
+// змінні:
+$fz: 14px;
+$fz-2: 30px;
+// щаблони:
+%link-01 {
+  font-size: $fz;
+  font-family: "Ubuntu";
+  color: rgb(180, 173, 158);
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+%ff-color {
+  font-family: "Playfair Display";
+  color: rgb(98, 98, 98);
+}
+// mixines:
+@mixin displayz($f, $w) {
+  display: $f;
+  flex-wrap: $w;
+  // display: flex;
+  // для того, щоб при наїзді елементів одне на одного вони переносились:
+  // flex-wrap: wrap;
+}
+
+body {
+  font-family: "Myriad Pro";
+}
+// 1. header:
+.header__menu-wrapper {
+  @include displayz(flex, wrap);
+  max-width: 1060px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.header__menu-list {
+  @include displayz(flex, wrap);
+  margin: 70px 0px 92px 0px;
+  // приліпляємо блок до верхівки екрану:
+  position: fixed;
+  top: 0;
+  left: auto;
+  width: 100%;
+}
+.header__menu-item {
+  font-size: $fz;
+  text-transform: uppercase;
+  line-height: 1.714;
+  &:hover,
+  &:focus {
+    opacity: 55%;
+  }
+  &:active {
+    color: red;
+  }
+  &:first-child {
+    font-size: $fz-2;
+    text-transform: uppercase;
+    line-height: 0.8;
+    margin: 0px 371px 0px 0px;
+    font-family: "Inconsolata";
+  }
+  &:nth-child(2) {
+    margin: 0px 123px 0px 0px;
+  }
+  &:nth-child(3) {
+    margin: 0px 102px 0px 0px;
+  }
+  &:nth-child(4) {
+    margin: 0px 93px 0px 0px;
+  }
+  &:last-child {
+    margin: 0px 0px 0px 0px;
+  }
+}
+.header__menu-link-main {
+  color: rgb(0, 0, 0);
+  letter-spacing: 10px;
+  &:active {
+    color: red;
+  }
+}
+.header__menu-link {
+  color: rgb(98, 98, 98);
+  &:active {
+    color: red;
+  }
+}
+.main__pic {
+  margin: 164px 0px 98px 0px;
+}
+// 2. content:
+.content__wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.content__link-1 {
+  font-size: $fz;
+  color: rgb(180, 173, 158);
+  text-transform: uppercase;
+  line-height: 1.2;
+  &:hover,
+  &:focus {
+    opacity: 55%;
+  }
+  &:active {
+    color: red;
+  }
+}
+.content__name-1 {
+  margin: 42px 0px 32px 0px;
+  font-size: $fz-2;
+  line-height: 1.2;
+  @extend %ff-color;
+}
+.cintent__text-1 {
+  margin: 0px 0px 50px 0px;
+  @extend %ff-color;
+  font-size: $fz;
+  line-height: 1.714;
+  text-align: left;
+}
+.content__link-1-1 {
+  display: inline-block;
+  @extend %link-01;
+  margin: 0px 0px 132px 0px;
+  &:hover,
+  &:focus {
+    opacity: 55%;
+  }
+  &:active {
+    color: red;
+  }
+}
+// 2-1 content cards:
+.content__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 62px;
+}
+.content__card-pic {
+  margin: 0px 0px 32px 0px;
+}
+.content__card-link {
+  @extend %link-01;
+  &:hover,
+  &:focus {
+    opacity: 55%;
+  }
+  &:active {
+    color: red;
+  }
+}
+.content__card-header {
+  font-size: $fz-2;
+  @extend %ff-color;
+  line-height: 1.2;
+  margin: 30px 0px 38px 0px;
+}
+.content__card-paragraph {
+  font-size: $fz;
+  @extend %ff-color;
+  line-height: 1.714;
+  text-align: left;
+  margin: 0px 0px 132px 0px;
+  &:nth-child(4) {
+    margin: 0px 0px 122px 0px;
+  }
+}
+
+// 3 middle:
+.middle__signup-wrapper {
+  width: 1200px;
+  height: 282px;
+  background-color: rgb(240, 240, 240);
+  margin: 0 auto 102px auto;
+  padding: 72px 0px 0px 0px;
+}
+.middle__signup-header {
+  font-size: $fz-2;
+  font-family: "Playfair Display";
+  color: rgb(51, 51, 51);
+  line-height: 1.2;
+  text-align: center;
+  margin: 0px 0px 80px 0px;
+}
+
+// !проблема в тому, що прит збільшенні блок виїзжає за межі батьківського блоку
+// *вирішено: в.middle__signup-wrapper {
+// * замість maax-width: 1200px; встановив width: 1200px;
+
+.input__wrapper-mid {
+  margin: 0px 0px 12px 404px;
+}
+.middle__signup-input {
+  display: inline-block;
+  margin: 0 auto;
+  background-color: rgb(240, 240, 240);
+  @extend %ff-color;
+  font-size: $fz;
+  line-height: 1.714;
+  width: 363px;
+}
+.middle__signup-line-ico {
+  margin: 0px 0px 0px 404px;
+}
+
+// 4 middle-cards:
+.content__wrapper-mid {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.content__cards-mid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 62px;
+}
+.content__card-pic-mid {
+  margin: 0px 0px 32px 0px;
+}
+.content__card-link-mid {
+  @extend %link-01;
+  &:hover,
+  &:focus {
+    opacity: 55%;
+  }
+  &:active {
+    color: red;
+  }
+}
+.content__card-header-mid {
+  font-size: $fz-2;
+  @extend %ff-color;
+  line-height: 1.2;
+  margin: 30px 0px 38px 0px;
+}
+.content__card-paragraph-mid {
+  font-size: $fz;
+  @extend %ff-color;
+  line-height: 1.714;
+  text-align: left;
+  margin: 0px 0px 132px 0px;
+  &:nth-child(4) {
+    margin: 0px 0px 166px 0px;
+  }
+}
+.content-end-link-wrapper {
+  max-width: 1200px;
+  height: 1426px;
+  margin: 0 auto;
+  text-align: center;
+}
+.content-end-link {
+  display: inline-block;
+  @extend %ff-color;
+  text-align: center;
+  height: 60px;
+  line-height: 60px;
+  width: 123px;
+  border: solid rgb(98, 98, 98) 1px;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+// 5 footer:
+.footer-wrapper {
+  @include displayz(flex, wrap);
+  width: 1200px;
+  height: 98px;
+  margin: 0 auto;
+  background-color: rgb(240, 240, 240);
+}
+.footer__menu-nav {
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.footer__menu-list {
+  @include displayz(flex, wrap);
+}
+.footer__menu-text {
+  display: inline-block;
+  margin: 40px 21px 0px 0px;
+}
+.footer__menu-item {
+  font-size: $fz;
+  color: rgb(0, 0, 0);
+  line-height: 1.714;
+  &:hover,
+  &:focus {
+    opacity: 55%;
+  }
+  &:active {
+    color: red;
+  }
+  &:first-child {
+    margin: 40px 18px 0px 150px;
+  }
+  &:last-child {
+    margin: 40px 640px 0px 0px;
+  }
+}
+.footer-link-ico {
+  margin: 40px 16px 0px 0px;
+  &:last-child {
+    // невеличка математична операція :)
+    margin: 20+20px 0px 0px 0px;
+  }
+}
