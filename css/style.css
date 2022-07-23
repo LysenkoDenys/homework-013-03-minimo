@@ -98,21 +98,26 @@ h6 {
   font-family: "Myriad Pro";
   font-style: normal;
   font-weight: 300;
-  src: local("Myriad Pro Light"), url("/fonts/MyriadPro-Light.woff") format("woff");
+  src: local("Myriad Pro Light"),
+    url("/fonts/MyriadPro-Light.woff") format("woff");
 }
 @font-face {
   font-family: "Myriad Pro";
   font-style: normal;
   font-weight: 400;
-  src: local("Myriad Pro Regular"), url("/fonts/MYRIADPRO-REGULAR.woff") format("woff");
+  src: local("Myriad Pro Regular"),
+    url("/fonts/MYRIADPRO-REGULAR.woff") format("woff");
 }
 @font-face {
   font-family: "Myriad Pro";
   font-style: normal;
   font-weight: 700;
-  src: local("Myriad Pro Bold"), url("/fonts/MYRIADPRO-BOLD.woff") format("woff");
+  src: local("Myriad Pro Bold"),
+    url("/fonts/MYRIADPRO-BOLD.woff") format("woff");
 }
-.content__card-link-mid, .content__card-link, .content__link-1-1 {
+.content__card-link-mid,
+.content__card-link,
+.content__link-1-1 {
   font-size: 14px;
   font-family: "Ubuntu";
   color: rgb(180, 173, 158);
@@ -120,7 +125,14 @@ h6 {
   line-height: 1.2;
 }
 
-.content-end-link, .content__card-paragraph-mid, .content__card-header-mid, .middle__signup-input, .content__card-paragraph, .content__card-header, .cintent__text-1, .content__name-1 {
+.content-end-link,
+.content__card-paragraph-mid,
+.content__card-header-mid,
+.middle__signup-input,
+.content__card-paragraph,
+.content__card-header,
+.cintent__text-1,
+.content__name-1 {
   font-family: "Playfair Display";
   color: rgb(98, 98, 98);
 }
@@ -153,7 +165,8 @@ body {
   text-transform: uppercase;
   line-height: 1.714;
 }
-.header__menu-item:hover, .header__menu-item:focus {
+.header__menu-item:hover,
+.header__menu-item:focus {
   opacity: 55%;
 }
 .header__menu-item:active {
@@ -209,7 +222,8 @@ body {
   text-transform: uppercase;
   line-height: 1.2;
 }
-.content__link-1:hover, .content__link-1:focus {
+.content__link-1:hover,
+.content__link-1:focus {
   opacity: 55%;
 }
 .content__link-1:active {
@@ -233,7 +247,8 @@ body {
   display: inline-block;
   margin: 0px 0px 132px 0px;
 }
-.content__link-1-1:hover, .content__link-1-1:focus {
+.content__link-1-1:hover,
+.content__link-1-1:focus {
   opacity: 55%;
 }
 .content__link-1-1:active {
@@ -250,7 +265,8 @@ body {
   margin: 0px 0px 32px 0px;
 }
 
-.content__card-link:hover, .content__card-link:focus {
+.content__card-link:hover,
+.content__card-link:focus {
   opacity: 55%;
 }
 .content__card-link:active {
@@ -322,7 +338,8 @@ body {
   margin: 0px 0px 32px 0px;
 }
 
-.content__card-link-mid:hover, .content__card-link-mid:focus {
+.content__card-link-mid:hover,
+.content__card-link-mid:focus {
   opacity: 55%;
 }
 .content__card-link-mid:active {
@@ -392,7 +409,8 @@ body {
   color: rgb(0, 0, 0);
   line-height: 1.714;
 }
-.footer__menu-item:hover, .footer__menu-item:focus {
+.footer__menu-item:hover,
+.footer__menu-item:focus {
   opacity: 55%;
 }
 .footer__menu-item:active {
